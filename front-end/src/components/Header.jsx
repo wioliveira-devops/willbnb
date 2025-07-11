@@ -1,15 +1,16 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="shadow-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
-        <div className="flex items-center">
+    <header className="shadow-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-8">
+        <Link to="/" className="flex items-center">
           <img className="h-12" src="./WillBnB_2.jpg" alt="Logo da WILLbnb" />
           <p className="text-primary-400 ml-[-12px] text-2xl font-bold">bnb</p>
-        </div>
+        </Link>
 
-        <div className="flex items-center rounded-full border border-gray-300 py-2 pr-4 pl-6 shadow-md">
+        <Link to="/" className="hidden items-center rounded-full border border-gray-300 py-2 pr-4 pl-6 shadow-md lg:flex">
           <p className="border-r border-r-gray-300 pr-4">Qualquer lugar</p>
           <p className="border-r border-r-gray-300 px-4">Qualquer semana</p>
           <p className="px-4">Hóspedes</p>
@@ -29,9 +30,9 @@ const Header = () => {
               />
             </svg>
           </div>
-        </div>
+        </Link>
 
-        <div className="flex items-center gap-2 rounded-full border border-gray-300 py-2 pr-4 pl-6 shadow-md">
+        <Link to="/login" className="flex items-center gap-2 rounded-full border border-gray-300 py-2 pr-4 pl-6 shadow-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -56,11 +57,11 @@ const Header = () => {
               d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
               clipRule="evenodd"
             />
-          </svg>
-          <p>William XYZ</p>
-        </div>
+          </svg> 
+          <p className="max-w-20 truncate sm:max-w-32">William XYZ</p>
+        </Link>
       </div>
-    </div>
+    </header>
   );
 };
 
